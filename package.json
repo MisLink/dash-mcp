@@ -1,0 +1,38 @@
+{
+  "name": "dash-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Dash documentation browser — supports stdio and HTTP transport with LAN proxy",
+  "bin": {
+    "dash-mcp": "./bin/dash-mcp.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/dash-mcp.mjs",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.0.3",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "cheerio": "^1.2.0",
+    "hono": "^4.12.21",
+    "http-proxy": "^1.18.1",
+    "jiti": "^2.7.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/http-proxy": "^1.17.17",
+    "@types/node": "^22.15.23",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.22.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
+  }
+}
